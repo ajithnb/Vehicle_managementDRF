@@ -1,0 +1,70 @@
+
+###
+GET http://127.0.0.1:8000/api/vehicle/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/vehicle/
+Content-Type: application/json
+
+{
+    "owner_name": "subin",
+    "phone": "9876543210",
+    "vehicle_number": "KL07AB1234",
+    "vehicle_name": "bmw",
+    "vehicle_type": "Car"
+}
+
+###
+GET http://127.0.0.1:8000/api/vehicle/2/
+
+###
+PUT http://127.0.0.1:8000/api/vehicle/1/
+Content-Type: application/json
+
+{
+    "owner_name": "Joyal",
+    "phone": "9876543210",
+    "vehicle_number": "KL07AB1234",
+    "vehicle_name": "Swift Dzire",
+    "vehicle_type": "Car"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/vehicle/2/
+
+###
+GET http://127.0.0.1:8000/api/service-booking/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/service-booking/
+Content-Type: application/json
+
+{
+    "vehicle": 2,
+    "service_type": "Full Service",
+    "booking_date": "2026-12-15",
+    "problem": "Engine oil replacement and general service",
+    "service_charge": 2500,
+    "status": "pending"
+}
+
+###
+GET http://127.0.0.1:8000/api/service-booking/1/
+
+###
+PUT http://127.0.0.1:8000/api/service-booking/1/
+Content-Type: application/json
+
+{
+    "vehicle": 2,
+    "service_type": "Full Service",
+    "booking_date": "2026-12-15",
+    "problem": "Engine oil replacement and general service",
+    "service_charge": 3000,
+    "status": "completed"
+}
+
+###
+DELETE http://127.0.0.1:8000/api/service-booking/1/
